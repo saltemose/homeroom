@@ -7,3 +7,4 @@ export const getClasses = (userID) => {
 export const createClass = data => {
   return axios.post('/api/classes', data)
 }
+

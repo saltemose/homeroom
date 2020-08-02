@@ -4,7 +4,7 @@
 
 
 .full-app-2 {
-    background-color: rgba(240, 240, 240, 0.651);
+    background-color: #f0f0f0a6;
 }
 body {
     height: 100%;
@@ -59,7 +59,7 @@ input.message {
     position: absolute;
     margin-left: -20px;
     margin-top: 130px;
-    width: 420px;
+    width: 40%;
     opacity: 1;
     background-color: white;
     display: inherit;
@@ -691,7 +691,6 @@ input.submit:hover {
     border-radius: 0px;
     margin-left: -20px;
     margin-top: 2px;
-    width: 100%;
     padding: 5px 20px 5px;
     border: 1px solid rgba(0, 217, 255, 0.452);
     border-left: none;
@@ -769,11 +768,12 @@ input.submit:hover {
     height: 125px;
     padding: 20px;
     margin-bottom: 0px;
-    width: 100%;
+    width: auto;
 }
 
 .discussion-box {
     margin-top: 0px;
+    
 }
 
 .bubble-2 {
@@ -826,7 +826,7 @@ input.submit:hover {
     font-weight: 600;
     padding: 20px;
     color: #19181A;
-    background-color: rgba(0, 217, 255, 0.452);
+    background-color: #00d9ff73;
 }
 
 .student-link {
@@ -1080,3 +1080,80 @@ input.dm-input {
     font-weight: 300;
     color: #646464d2;
 }
+
+@media (max-width: 800px) {
+    .classrooms {
+        overflow: hidden;
+        overflow-x: scroll;
+        margin: 0;
+    }
+    .dashboard {
+        width: 100%;
+        min-width: 100%;
+    }
+   .col-1 {
+       margin: 0;
+       width: 100%;
+       height: auto;
+       margin-bottom: 0px;
+   }
+
+   .col-2 {
+       width: 100%;
+   }
+
+   .col-3 {
+       width: 100%;
+   }
+
+   h5 {
+       width: 90%;
+   }
+
+   .new-message {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.2em;
+    text-align: center;
+    width: 80%;
+    z-index: 40000;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 7px #646464;
+}
+.bubble-container {
+    padding-top: 3px;
+    margin-left: 20px;
+    display: inline-block;
+    width: auto;
+}
+
+.discussion-add textarea {
+    width: 85%;
+    display: block;
+    background-color: #7a7a7a17;
+    height: 60px;
+    outline: none;
+    border: none;
+    font-size: 9.5pt;
+    padding: 10px;
+    margin: 12px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+.discussion-box {
+    margin-top: 0px;
+    
+}
+
+.bubble-2 {
+    width: 90%;
+}
+
+}
+    

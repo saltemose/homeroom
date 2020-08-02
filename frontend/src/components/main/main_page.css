@@ -11,7 +11,7 @@
 
 .main-section-2 {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #f0f0f0;
     margin: 0;
     opacity: 1;
     padding-bottom: 20px;
@@ -20,3 +20,20 @@
 * {
     margin: 0;
 }
+
+.mobile-front {
+    display: none;
+}
+
+@media (max-width: 800px) {
+.desktop-front {
+    display: none;
+}
+
+.mobile-front {
+    padding-top: 25px;
+    display: block;
+    background-color: #f0f0f0;
+}
+
+  }
