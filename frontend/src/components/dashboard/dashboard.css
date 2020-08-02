@@ -1084,6 +1084,7 @@ input.dm-input {
 @media (max-width: 800px) {
     .classrooms {
         overflow: hidden;
+        white-space: nowrap;
         overflow-x: scroll;
         margin: 0;
     }
