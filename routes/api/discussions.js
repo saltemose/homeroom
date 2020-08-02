@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const Discussion = require('../../models/Discussion');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-const Discussion = require('../../models/discussion');
+
 
 router.get('/', (req, res) => {
   var query = req.query;
