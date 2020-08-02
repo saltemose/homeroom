@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import "../nav/navbar.css"
-import StudentLoginImage from '../../assets/images/student_login.png';
-import TeacherLoginImage from '../../assets/images/teacher_login.png';
 
 class LoginForm extends React.Component {
   constructor(props) {

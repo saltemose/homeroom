@@ -1,7 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import studentSignupImage from '../../assets/images/student_signup.png';
-import teacherSignupImage from '../../assets/images/teacher_signup.png';
 
 class SignupForm extends React.Component {
   constructor(props) {
