@@ -20,4 +20,4 @@ const DiscussionSchema = new Schema({
     }
   })
 
-  Discussion = module.exports = mongoose.model('Discussion', DiscussionSchema);
+  module.exports = Discussion = mongoose.model('Discussion', DiscussionSchema);

@@ -9,4 +9,4 @@ const ClassSchema = new Schema({
     users: [Schema.Types.ObjectId]
   })
 
-  Class = module.exports = mongoose.model('Class', ClassSchema);
+  module.exports = Class = mongoose.model('Class', ClassSchema);
