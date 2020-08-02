@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-const Message = require('../../models/message');
+const Message = require('../../models/Message');
 
 router.get('/', (req, res) => {
   var query = req.query;
