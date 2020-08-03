@@ -10,7 +10,6 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const users = require("./routes/api/users");
-const tweets = require("./routes/api/tweets");
 const messages = require("./routes/api/messages");
 const discussions = require("./routes/api/discussions");
 const classes = require("./routes/api/classes");
