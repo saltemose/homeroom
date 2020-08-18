@@ -115,7 +115,7 @@ input.message {
 
 h4 {
     font-size: 11.5pt;
-    color: white;
+    color: #19181A;
     font-weight: 600;
     text-align: left;
     display: inline;
@@ -131,12 +131,11 @@ h4.black {
 
 .user-name {
     font-size: 10.5pt;
-    color: white;
+    color: #19181A;
     font-weight: lighter;
-    padding: 5px;
+    width: 80%;
+    padding: 8px;
     padding-left: 0;
-    
-    
 }
 
 * {
@@ -173,7 +172,7 @@ h4.black {
     border-right: 1px solid rgba(25, 24, 26, 0.192);
 }
 
-.col-3 {
+.col-3-desktop {
     display: inline-block;
     vertical-align: top;
     background-color: white;
@@ -223,21 +222,24 @@ h4.black {
     margin-left: 0px;
     height: auto;
     overflow: hidden;
-    overflow-x: scroll;
+  
 }
 
 .classrooms {
     width: 100%;
     height: 100%;
-    margin-left: 2px;
+    margin-left: 0px;
     padding-left: 0px;
     vertical-align: bottom;
     margin-top: 0px;
-    opacity: .9;
+    opacity: 1;
+    padding: 2px;
+    overflow-x: scroll;
+    background-color: rgba(248, 248, 248, 0.973);
 }
 
 .type {
-    color: #ebebeb;
+    color: #19181A;
     font-size: 10pt;
 }
 
@@ -328,9 +330,10 @@ h5 {
 }
 
 .sidebar-item-inside {
-
-    padding-left: 20px;
-    padding-top: 15px;
+    background-color: rgb(255, 255, 255);
+    color: #19181A;
+    padding-left: 10px;
+    padding-top: 0px;
     border-bottom: 1px solid rgba(25, 24, 26, 0.192);
 }
 
@@ -339,7 +342,7 @@ h5 {
     font-size: 11;
     font-weight: 600;
     padding-left: 20px;
-    padding: 20px;
+    padding: 30px;
     padding-bottom: 5px;
     color: rgb(39, 38, 41);
 }
@@ -392,24 +395,23 @@ h5 {
     border-radius: 0px;
     font-weight: 600;
     color: #19181A;
-    background-color: rgba(255, 255, 255, 0.829);
-    height: 25px;
+    background-color: rgb(255, 255, 255);
+    height: 20px;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
     font-size: 9pt;
     padding: 10px;
+    margin: 2px;
     border: 1px solid #cecece;
-    border-bottom: none;
- 
+    border-radius: 3px;
+    opacity: 1;
+
 }
 
 .class-room:hover {
     cursor: pointer;
-    height: 25px;
+    height: 20px;
     color: white;
     border: 1px solid rgba(17, 17, 17, 0.527);
-    border-bottom: none;
     font-weight: 600;
 }
 
@@ -422,13 +424,14 @@ h5 {
     color: #19181A;
     background-color: white;
     border: 1px solid #19181A;
-    border-bottom: none;
-    height: 25px;
+    height: 20px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 9pt;
     padding: 10px;
+    border-radius: 3px;
+    margin: 1.5px;
 }
 
 .class-room-selected:hover {
@@ -443,21 +446,20 @@ h5 {
     font-weight: 600;
     color: #19181A;
     background-color: transparent;
-    height: 25px;
+    height: 20px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 9pt;
     padding: 10px;
+    margin: 1.5px;
     border: 1px solid #cecece;
-    border-bottom: none;
-    
+    border-radius: 3px;
 }
 
 .class-room-add:hover {
     border: 1px solid #19181A;
-    border-bottom: none;
-    height: 25px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -467,7 +469,6 @@ h5 {
     margin-top: 2px;
     color: #19181A;
     background-color: transparent;
-    box-shadow: 1px solid rgba(25, 24, 26, 0.5);
 }
 
 .class-name-add {
@@ -936,12 +937,13 @@ input.dm-input {
     background-color: #74747431;
     background-color: #40ccf3e7;
     color: #19181A;
-    margin-top: 6px;
+    margin: 5px;
+    maring-bottom: 2px;
     padding: 4px;
     padding-left: 10px;
     padding-right: 10px;
     width: fit-content;
-    border-radius: 25px;
+    border-radius: 11px;
 }
 
 .bubble-4 {
@@ -951,12 +953,13 @@ input.dm-input {
     font-weight: lighter;
     background-color: #74747431;
     color: #19181A;
-    margin-top: 6px;
+    margin: 5px;
+    margin-bottom: 2px;
     padding: 4px;
     padding-left: 10px;
     padding-right: 10px;
     width: fit-content;
-    border-radius: 25px;
+    border-radius: 11px;
 }
 
 .dm-body-message-2 {
@@ -1083,6 +1086,10 @@ input.dm-input {
     color: #646464d2;
 }
 
+.mobile-only-options {
+    display: none;
+}
+
 @media (max-width: 600px) {
     .classrooms {
         width: 100%;
@@ -1113,12 +1120,13 @@ input.dm-input {
        display: inline-block;
        width: 99.5%;
        height: auto;
-       border: 1px solid black;
+       border: 1px solid rgba(0, 0, 0, 0.479);
 
    }
 
    .col-3 {
        width: 99.5%;
+       height: 100%;
        border: 1px solid rgba(0, 0, 0, 0.479);
    }
 
@@ -1127,15 +1135,16 @@ input.dm-input {
        color: rgba(255, 255, 255, 0.904);
        text-align: center;
        margin: 0 auto;
+       padding: 3px;
    }
 
    .sidebar-item {
-       border-top: 1px solid white;
+       border-top: 1px solid transparent;
    }
 
    h4 {
        font-weight: 400;
-       color: white;
+       color: #19181A;
    }
    .chevron-right i {
        display: none;
@@ -1164,7 +1173,7 @@ input.dm-input {
 }
 
 .discussion-add textarea {
-    width: 85%;
+    width: 75%;
     display: block;
     background-color: #7a7a7a17;
     height: 60px;
@@ -1172,17 +1181,24 @@ input.dm-input {
     border: none;
     font-size: 9.5pt;
     padding: 10px;
-    margin: 12px;
-    margin-top: 6px;
-    margin-bottom: 0px;
+    margin: 12px auto;
 }
 .discussion-box {
     width: 100%;
     margin-top: 5px;
 }
 
+.discussion-box-question {
+    background-color: #19181A;
+    height: 85px;
+    padding: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
 .bubble-2 {
     width: 90%;
+    font-weight: 300;
 }
 
 .sidebar-item-2 {
@@ -1222,7 +1238,7 @@ input.dm-input {
 }
 
 .type {
-    color: #ebebeb;
+    color: #19181A;
     font-size: 10pt;
     font-weight: 300;
 }
@@ -1408,10 +1424,12 @@ input.dm-input {
 
 .sidebar-item {
     border-bottom: 1px solid white;
-    padding: 30px;
+    padding: 5px;
+    padding-top: 7px;
     text-align: center;
     margin: 0 auto;
     overflow: hidden;
+    color: #19181A;
 }
 
 .left {
@@ -1426,5 +1444,39 @@ input.dm-input {
     width: 100%;
 
 }
+
+.mobile-only-options {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgba(25, 24, 26, 0.192);
+    text-align: center;
+    background-color: rgba(248, 248, 248, 0.973);
+}
+
+.mobile-option {
+    display: inline-block;
+    border: 1px solid rgba(25, 24, 26, 0.192);
+    padding: 10px;
+    width: 43%;
+    background-color: white;
+    opacity: 1;
+    font-size: 10pt;
+}
+
+.mobile-option-selected {
+    display: inline-block;
+    border: 1px solid rgb(25, 24, 26);
+    padding: 10px;
+    width: 43%;
+    background-color: white;
+    opacity: 1;
+    font-size: 10pt;
+}
+
+.col-3-desktop {
+    display: none;
+}
+
 }
     

@@ -334,6 +334,10 @@ input:focus {
         opacity: .9;
     }
     div.logout {
+        position: relative;
+        top: 15px;
+        right: 5px;
+        width: 70px;
         margin-left: 0px;
         font-size: 11pt;
         color: #19181A;

@@ -29,6 +29,7 @@ class Dashboard extends React.Component {
           newClass: '',
           addNewClass: 'no',
           dm: '',
+          mobileOption: 'cd'
       }
       this.updateTopic = this.updateTopic.bind(this);
       this.updateMessage = this.updateMessage.bind(this);
@@ -452,6 +453,13 @@ class Dashboard extends React.Component {
             </div>
 
             <div className="col-a">
+            <div className="sidebar-item-inside">
+            
+            <div className="user-name"><h4>{firstName} {lastName}</h4> <br/><div className="type">{type}</div></div>
+            </div>
+            <div className="mobile-only-options">
+              <div className={this.state.mobileOption === "cd" ? "mobile-option-selected" : "mobile-option"} onClick={() => this.setState({mobileOption: 'cd'})}>Class Discussions</div><div className={this.state.mobileOption === 'dm' ? "mobile-option-selected" : "mobile-option"} onClick={() => this.setState({mobileOption: 'dm'})}>Direct Messages</div>
+            </div>
             <div className="classrooms">
            
                     {Object.keys(classes).map((key) => {
@@ -474,18 +482,15 @@ class Dashboard extends React.Component {
             </div>
             </div>
 
-            <div className="col-1">
+            <div className={this.state.mobileOption === 'cd' ? "col-1" : "hidden"}>
             <div className="messages">
             <div className="sidebar-item-a">
-                <div className="sidebar-item-inside">
-            
-            <div className="user-name"><h4>{firstName} {lastName}</h4> <br/><div className="type">{type}</div> &nbsp; </div>
-            </div>
+         
             </div>
             <div onClick={this.handleDiscussionClick} className="message-link">
             <div className="sidebar-item">
             <div className="main"> <div className="left">
-            <h5 >Discussion Topics</h5></div> <div className="right"> <span className="chevron-right"><i class={this.state.discussionTopics === 'no' ? "fa fa-angle-down" : "fa fa-angle-up"}></i></span></div>
+            <h5 >Discussion Topics</h5></div> <div className="right"> <span className="chevron-right"><i class={this.state.discussionTopics === 'no' ? "" : ""}></i></span></div>
             </div>
             
             </div>
@@ -532,7 +537,7 @@ class Dashboard extends React.Component {
             </div></div>
   
 
-            <div className="col-2">
+            <div className={this.state.mobileOption === 'cd' ? "col-2" : "hidden"}>
             <div className="board">
 
                     {Object.keys(this.props.messages).map((eachKey) => {
@@ -675,7 +680,7 @@ class Dashboard extends React.Component {
             </div>
 
 
-            <div className="col-3">
+            <div className={this.state.mobileOption === 'dm' ? "col-3" : "col-3-desktop"}>
             <div className="student-list-sidebar">
                 <div className="student-list-title">Direct Messages</div>
                 <div className="dm-main-container">
