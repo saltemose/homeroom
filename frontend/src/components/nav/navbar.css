@@ -198,8 +198,8 @@ input.submit-1 {
 }
 
 input.email-input {
-    background-color: white;
-    outline: 1px solid #40ccf3e7;
+    background-color: rgb(245, 245, 245);
+    outline: none;
     color: #19181A;
 }
 
@@ -272,7 +272,7 @@ input:focus {
     opacity: .9;
     border-radius: 0px;
     color: #19181A;
-    outline: 1px solid rgba(90, 90, 90, 0.185);
+    outline: 1px solid rgba(25, 24, 26, 0.507);
   margin-left: 18px;
   margin-top: 0px;
   padding-top: 12px;
