@@ -1101,9 +1101,10 @@ input.dm-input {
        overflow: hidden;
        white-space: nowrap;
        overflow-x: scroll;
-       width: 100%;
+       width: 99.5%;
        height: auto;
        margin-bottom: 0px;
+       border: 1px solid black;
    }
 
    .col-2 {
@@ -1117,7 +1118,8 @@ input.dm-input {
    }
 
    .col-3 {
-       width: 100%;
+       width: 99.5%;
+       border: 1px solid rgba(0, 0, 0, 0.479);
    }
 
    h5 {
@@ -1219,6 +1221,11 @@ input.dm-input {
     box-shadow: 0 1px 3px white;
 }
 
+.type {
+    color: #ebebeb;
+    font-size: 10pt;
+    font-weight: 300;
+}
 
 .sidebar-item-click-a {
     display: none;
@@ -1270,6 +1277,27 @@ input.dm-input {
     width: 100%;
 }
 
+.dm-header {
+    padding: 10px;
+    font-size: 9pt;
+    text-align: left;
+    background-color: rgba(249, 249, 249, 0.986);
+    color: rgba(25, 24, 26, 0.63);
+    border-top: 1px solid rgba(25, 24, 26, 0.336);
+    border-bottom: 1px solid rgba(25, 24, 26, 0.336);
+    
+}
+
+.message-box-main {
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex; 
+    flex-direction: column-reverse;
+    max-height: 430px;
+    width: 100%;
+}
+
 .message-box {
     height: auto;
     padding-bottom: 120px;
@@ -1290,7 +1318,7 @@ input.dm-input {
     padding-bottom: 5px;
     width: 100%;
     margin-top: 0px;
-    border-top: 1px solid rgba(25, 24, 26, 0.192);
+    border-top: 1px solid rgba(25, 24, 26, 0.336);
     background-color: white;
     text-align: right;
    
@@ -1331,13 +1359,15 @@ input.dm-input {
 
 .bubble-3 {
     display: inline-block;
-    font-size: 8.5pt;
+    font-size: 9.5pt;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     background-color: #74747431;
     background-color: #40ccf3e7;
     color: rgb(15, 14, 15);
     margin-top: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 6px;
     padding-left: 10px;
     padding-right: 10px;
@@ -1347,13 +1377,16 @@ input.dm-input {
 
 .bubble-4 {
     font-weight: 300;
+    font-size: 9.5pt;
     padding: 6px;
     border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
     color: rgb(15, 14, 15);
 }
 
 .selected-topic {
-    display: inline-block;
+    display: none;
     font-weight: 400;
     font-size: 11pt;
     margin-bottom: 15px;
@@ -1369,13 +1402,13 @@ input.dm-input {
 }
 
 .student-list-title {
-    padding: 40px;
-    margin-top: 20px;
+    padding: 30px;
+    margin-top: 0px;
 }
 
 .sidebar-item {
     border-bottom: 1px solid white;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     margin: 0 auto;
     overflow: hidden;
@@ -1383,6 +1416,15 @@ input.dm-input {
 
 .left {
     width: 100%;
+}
+
+.student-links-container {
+    position: relative;
+    height: 500px;
+    display: flex; 
+    flex-direction: column-reverse;
+    width: 100%;
+
 }
 }
     
