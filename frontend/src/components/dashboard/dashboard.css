@@ -12,10 +12,12 @@ body {
 .dashboard {
     position: relative;
     margin: 0 auto;
-    max-width: 95%;
+    max-width: 100%;
+    overflow: hidden;
     min-width: 1100px;
+    width: 100%;
     vertical-align: top;
-    padding-top: 70px;
+    padding-top: 65px;
     height: auto;
     border-bottom: 1px solid rgba(25, 24, 26, 0.192);
    
@@ -312,7 +314,7 @@ input.submit {
 h5 {
     font-weight: 600;
     margin-bottom: 5px;
-    width: 250px;
+    width: 100%;
     display: inline-block;
     font-size: 11pt;
     color: rgb(79, 77, 83);
@@ -391,7 +393,7 @@ h5 {
     font-weight: 600;
     color: #19181A;
     background-color: rgba(255, 255, 255, 0.829);
-    height: 20px;
+    height: 25px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -406,7 +408,7 @@ h5 {
     cursor: pointer;
     height: 25px;
     color: white;
-    border: 1px solid rgba(82, 82, 82, 0.123);
+    border: 1px solid rgba(17, 17, 17, 0.527);
     border-bottom: none;
     font-weight: 600;
 }
@@ -441,7 +443,7 @@ h5 {
     font-weight: 600;
     color: #19181A;
     background-color: transparent;
-    height: 20px;
+    height: 25px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -608,7 +610,7 @@ input.submit:hover {
     margin-left: 0px;
     text-align: left;
     padding-bottom: 5px;
-    min-width: 20px;
+    min-width: 10%;
 
 }
 
@@ -616,7 +618,7 @@ input.submit:hover {
     padding-top: 3px;
     margin-left: 20px;
     display: inline-block;
-    width: fit-content;
+    width: 100%;
 }
 
 .discussion-date {
@@ -768,7 +770,7 @@ input.submit:hover {
     height: 125px;
     padding: 20px;
     margin-bottom: 0px;
-    width: auto;
+    width: 100%;
 }
 
 .discussion-box {
@@ -1081,8 +1083,9 @@ input.dm-input {
     color: #646464d2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .classrooms {
+        width: 100%;
         overflow: hidden;
         white-space: nowrap;
         overflow-x: scroll;
@@ -1094,13 +1097,23 @@ input.dm-input {
     }
    .col-1 {
        margin: 0;
+       display: block;
+       overflow: hidden;
+       white-space: nowrap;
+       overflow-x: scroll;
        width: 100%;
        height: auto;
        margin-bottom: 0px;
    }
 
    .col-2 {
-       width: 100%;
+       margin: 0;
+       margin-top: 1px;
+       display: inline-block;
+       width: 99.5%;
+       height: auto;
+       border: 1px solid black;
+
    }
 
    .col-3 {
@@ -1108,9 +1121,23 @@ input.dm-input {
    }
 
    h5 {
-       width: 90%;
+       width: 100%;
+       color: rgba(255, 255, 255, 0.904);
+       text-align: center;
+       margin: 0 auto;
    }
 
+   .sidebar-item {
+       border-top: 1px solid white;
+   }
+
+   h4 {
+       font-weight: 400;
+       color: white;
+   }
+   .chevron-right i {
+       display: none;
+   }
    .new-message {
     display: block;
     padding-top: 20px;
@@ -1148,13 +1175,214 @@ input.dm-input {
     margin-bottom: 0px;
 }
 .discussion-box {
-    margin-top: 0px;
-    
+    width: 100%;
+    margin-top: 5px;
 }
 
 .bubble-2 {
     width: 90%;
 }
 
+.sidebar-item-2 {
+    display: inline-block;
+    width: 70%;
+    margin: 3px;
+
+    text-align: left;
+    padding: 10px;
+    padding-left: 10px;
+    color: #19181A;
+    background-color: white;
+    font-weight: 400;
+    font-size: 11pt;
+    border: 1px solid rgba(255, 255, 255, 0.781);
+    
+}
+
+.main {
+}
+
+.sidebar-item-2-selected {
+    display: inline-block;
+    width: 70%;
+    cursor: pointer;
+    color: #19181A;
+    border: 1px solid transparent;
+    background-color: yellow;
+    text-align: left;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 11pt;
+    margin: 3px;
+    box-shadow: 0 1px 3px white;
+}
+
+
+.sidebar-item-click-a {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(24, 24, 24);
+    font-weight: 400;
+    font-size: 10.5pt;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(250, 250, 250);
+}
+
+.discussion-topics {
+    max-height: 120px;
+    overflow: hidden;
+    overflow-x: scroll;
+    color: #19181A;
+}
+
+.discussion-topics-open {
+    height: auto;
+ 
+}
+
+.bubble {
+    color: white;
+    font-weight: 550;
+    font-size: 11pt;
+    padding-right: 10px;
+    min-width: 20px;
+    position: relative;
+    border-radius: 0px;
+    margin-left: -20px;
+    margin-top: 0px;
+    padding: 5px 20px 5px;
+    border: 1px solid rgba(0, 217, 255, 0.452);
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+.discussion {
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: left;
+    padding-bottom: 0px;
+    min-width: 100%;
+    width: 100%;
+}
+
+.message-box {
+    height: auto;
+    padding-bottom: 120px;
+}
+
+.bubble-container {
+    padding-top: 0px;
+    margin-left: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.discussion-add {
+    position: absolute;
+    bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 0px;
+    border-top: 1px solid rgba(25, 24, 26, 0.192);
+    background-color: white;
+    text-align: right;
+   
+}
+
+.discussion-add textarea {
+    width: 93%;
+    display: block;
+    background-color: #7a7a7a17;
+    height: 30px;
+    outline: none;
+    border: none;
+    font-size: 9.5pt;
+    padding: 10px;
+    margin: 12px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+.author {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 8.5pt;
+    color: #19181A;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.last-message-dm {
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 8pt;
+    font-weight: 300;
+    color: #202020d2;
+}
+
+.bubble-3 {
+    display: inline-block;
+    font-size: 8.5pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    background-color: #74747431;
+    background-color: #40ccf3e7;
+    color: rgb(15, 14, 15);
+    margin-top: 6px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+.bubble-4 {
+    font-weight: 300;
+    padding: 6px;
+    border-radius: 8px;
+    color: rgb(15, 14, 15);
+}
+
+.selected-topic {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 11pt;
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-left: -20px;
+    border-top: 5px solid yellow;
+    border-left: none;
+    border-bottom: 5px solid yellow;
+    color: #19181A;
+    background-color: yellow;
+    width: 100%;
+ 
+}
+
+.student-list-title {
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.sidebar-item {
+    border-bottom: 1px solid white;
+    padding: 40px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.left {
+    width: 100%;
+}
 }
     

@@ -304,7 +304,7 @@ input:focus {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .login-row {
         display: inline-block;
         text-align: center;
@@ -332,5 +332,57 @@ input:focus {
         color: #19181A;
         background-color: white;
         opacity: .9;
+    }
+    div.logout {
+        margin-left: 0px;
+        font-size: 11pt;
+        color: #19181A;
+        border: none;
+        background-color: white;
+        display: inline;
+        text-decoration: none;
+      
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        vertical-align: middle;
+        padding: 13px;
+    }
+
+    .login-container {
+        background-color: #40ccf3e7;
+        position: relative;
+        display: inline-block;
+        width: 280px;
+        height: 300px;
+        border: 1px solid #2d383be7;
+        border-right: 1px solid #2d383be7;
+        border-bottom: none;
+        border-radius: 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+        z-index: 1000;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    
+    .login-container-2 {
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        display: inline-block;
+        width: 280px;
+        height: 300px;
+        border-radius: 0px;
+        border: 1px solid rgba(25, 24, 26, 0.911);
+        border-left: 1px solid rgba(25, 24, 26, 0.911);
+        border-top: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+        z-index: 1000;
     }
 }

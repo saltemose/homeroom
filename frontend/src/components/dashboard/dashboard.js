@@ -55,6 +55,7 @@ class Dashboard extends React.Component {
       this.openDM = this.openDM.bind(this);
       this.updateDM = this.updateDM.bind(this);
       this.createDM = this.createDM.bind(this);
+      this.setClass = this.setClass.bind(this);
  
   } 
 
@@ -65,9 +66,7 @@ class Dashboard extends React.Component {
     this.props.fetchAllDirectMessagesA(this.props.currentUser.id);
     this.props.fetchAllDirectMessagesB(this.props.currentUser.id);
     this.props.fetchStudents();
-    if (this.props.classes) {
-        this.state.selectedClass = this.props.classes['0'].name
-    }
+
   }
 
   componentDidUpdate() {
@@ -77,7 +76,28 @@ class Dashboard extends React.Component {
       this.state.selectedTopic = '' }
       if (this.state.initialMessageID !== this.state.messageID) {
       this.props.fetchDiscussions(this.state.messageID);
-      this.state.initialMessageID = this.state.messageID};
+      this.state.initialMessageID = this.state.messageID
+    };
+      if (this.props.newDiscussionMessage) {
+     
+        this.props.fetchDiscussions(this.state.messageID)
+        };
+
+      if (this.props.newDirectMessage) {
+        var studentID = this.state.selectedStudent
+        if (this.props.currentUser.id > studentID){
+          this.props.fetchDirectMessages(this.props.currentUser.id, studentID);
+          }
+          else {
+          this.props.fetchDirectMessages(studentID, this.props.currentUser.id);
+          }
+      }
+    }
+
+    setClass() {
+      if (this.props.classes) {
+        this.setState({selectedClass: this.props.classes['0'].name})
+    }
     }
 
 
@@ -394,7 +414,9 @@ class Dashboard extends React.Component {
     return (
     
         classes ? (
+        
         <div className="full-app-2">
+          {this.setClass}
         <div className="dashboard">
                 <div onClick={this.handleNewAssignment} className={this.state.newAssignment === 'no' ? "hidden" : "new-message-background"}> </div>
                                <div className={this.state.newAssignment === 'no' ? "hidden" : "new-message"}>
@@ -463,7 +485,7 @@ class Dashboard extends React.Component {
             <div onClick={this.handleDiscussionClick} className="message-link">
             <div className="sidebar-item">
             <div className="main"> <div className="left">
-            <h5 >Discussion Topics</h5></div> <div className="right"> <span className="chevron-right"><i class={this.state.discussionTopics === 'no' ? "fa fa-chevron-down" : "fa fa-chevron-up"}></i></span></div>
+            <h5 >Discussion Topics</h5></div> <div className="right"> <span className="chevron-right"><i class={this.state.discussionTopics === 'no' ? "fa fa-angle-down" : "fa fa-angle-up"}></i></span></div>
             </div>
             
             </div>
@@ -482,7 +504,9 @@ class Dashboard extends React.Component {
             Create New Topic of Discussion <i class="far fa-comment-alt-edit"></i>
        
             </div>
+   
 
+            <div className="hidden">
             <div onClick={this.handleAssignmentClick} className="message-link">
             <div className="sidebar-item">
             <div className="main"> <div className="left">
@@ -505,7 +529,7 @@ class Dashboard extends React.Component {
 
             
 
-            </div>
+            </div></div>
   
 
             <div className="col-2">
@@ -616,7 +640,7 @@ class Dashboard extends React.Component {
 
                     })} 
                     { ((this.props.newDiscussionMessage) && (this.props.newDiscussionMessage.messageID === this.state.messageID))? 
-                             (
+                             (<div className="hidden">
                                 <div className="discussion-box">
                                 <div className="author">
                                 {this.props.newDiscussionMessage.author}
@@ -633,7 +657,7 @@ class Dashboard extends React.Component {
                                     </div>
                                 </div>
                             
-                        )
+                                </div>)
                     : <div></div>}
                     </div>
            
@@ -696,11 +720,13 @@ class Dashboard extends React.Component {
                             )
                         }
                     })}
+                       <div className="hidden">
                     {
                       (this.props.newDirectMessage && (this.props.newDirectMessage.participantA === this.props.currentUser.id || this.props.newDirectMessage.participantB === this.props.currentUser.id) && (this.props.newDirectMessage.participantA === this.state.selectedStudent || this.props.newDirectMessage.participantB === this.state.selectedStudent) ) ?
-
+                   
                     ((this.props.newDirectMessage.author === this.props.currentUser.first_name) ? 
-                      (<div className="dm-body-message-2">
+                      (
+                      <div className="dm-body-message-2">
                <div className="bubble-3">{this.props.newDirectMessage.content}</div><br/>
                <div className="dm-time">
                 {this.milToStandard(this.props.newDirectMessage.dateCreated.slice(11,16))}
@@ -711,9 +737,9 @@ class Dashboard extends React.Component {
                    <div className="dm-time">
                     {this.milToStandard(this.props.newDirectMessage.dateCreated.slice(11,16))}
                     </div>
-                   </div>
-               )) : (<div></div>)
-                    }
+                
+               </div>)) : (<div></div>)
+              }</div>
                 </div>
                 </div>
                 </div>
