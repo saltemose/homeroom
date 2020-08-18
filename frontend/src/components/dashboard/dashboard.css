@@ -1111,7 +1111,7 @@ input.dm-input {
        width: 99.5%;
        height: auto;
        margin-bottom: 0px;
-       border: 1px solid black;
+       border: none;
    }
 
    .col-2 {
@@ -1120,14 +1120,14 @@ input.dm-input {
        display: inline-block;
        width: 99.5%;
        height: auto;
-       border: 1px solid rgba(0, 0, 0, 0.479);
+       border: none;
 
    }
 
    .col-3 {
        width: 99.5%;
        height: 100%;
-       border: 1px solid rgba(0, 0, 0, 0.479);
+       border: none;
    }
 
    h5 {
@@ -1418,14 +1418,14 @@ input.dm-input {
 }
 
 .student-list-title {
-    padding: 30px;
+    padding: 15px;
     margin-top: 0px;
+    text-align: center;
 }
 
 .sidebar-item {
     border-bottom: 1px solid white;
-    padding: 5px;
-    padding-top: 7px;
+    padding: 15px;
     text-align: center;
     margin: 0 auto;
     overflow: hidden;
@@ -1449,29 +1449,30 @@ input.dm-input {
     display: block;
     width: 100%;
     background-color: white;
-    border-bottom: 1px solid rgba(25, 24, 26, 0.192);
     text-align: center;
-    background-color: rgba(248, 248, 248, 0.973);
+    background-color: white;
 }
 
 .mobile-option {
     display: inline-block;
-    border: 1px solid rgba(25, 24, 26, 0.192);
-    padding: 10px;
-    width: 43%;
-    background-color: white;
+    width: 50%;
+    background-color: rgb(238, 238, 238);
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 1;
     font-size: 10pt;
 }
 
 .mobile-option-selected {
     display: inline-block;
-    border: 1px solid rgb(25, 24, 26);
-    padding: 10px;
-    width: 43%;
+    width: 50%;
     background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 1;
     font-size: 10pt;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgb(240, 240, 240);
 }
 
 .col-3-desktop {

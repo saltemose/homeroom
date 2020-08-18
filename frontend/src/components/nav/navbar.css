@@ -1,3 +1,5 @@
+
+
 .NavBar {
     display: flex;
     flex-direction: row;
@@ -197,7 +199,7 @@ input.submit-1 {
 
 input.email-input {
     background-color: white;
-    outline: 1px solid #19181a70;
+    outline: 1px solid #40ccf3e7;
     color: #19181A;
 }
 
@@ -221,7 +223,7 @@ input:focus {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
  .next-btn {
-    width: 87%;
+    width: 236px;
     background-color: white;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -405,12 +407,14 @@ input:focus {
         font-weight: 800;
         margin-top: 5px;
         font-size: 16pt;
-        color: #19181A;}
+        color: #19181A;
+     
+        }
 
         .demo-login {
             position: relative;
-            width: 90%;
-            height: 15px;
+            width: 236px;
+            height: 16px;
             text-align: center;
             background-color: transparent;
             opacity: .9;
@@ -426,14 +430,14 @@ input:focus {
         
         .demo-login-1 {
             position: relative;
-            width: 90%;
-            height: 15px;
+            width: 236px;
+            height: 16px;
             text-align: center;
             background-color: transparent;
             opacity: .9;
             border-radius: 0px;
             color: #19181A;
-            outline: 1px solid rgba(59, 59, 59, 0.486);
+            outline: 1px solid #40ccf3e7;
             margin: 0 auto;
           padding-top: 12px;
           padding-bottom: 12px;
@@ -442,29 +446,29 @@ input:focus {
         }
 
         input.submit {
-            width: 91%;
+            width: 236px;
             padding: 0;
             border-radius: 0;
             height: 40px;
             outline: none;
-            border: none;
-            border: 1px solid rgba(133, 133, 133, 0.438);
+            border: 1px solid transparent;
+            outline: 1px solid white;
             background-color: transparent;
         }
         
         input.submit-1 {
-            width: 91%;
+            width: 236px;
             padding: 0;
             border-radius: 0;
             height: 40px;
-            outline: none;
+            outline: 1px solid #40ccf3e7;
             border: none;
-            border: 1px solid rgba(59, 59, 59, 0.486);
+            border: 1px solid #40ccf3e7;
             background-color: transparent;
         
         }
         input {
-            width: 82%;
+            width: 220px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 11pt;
             margin-top: 0px;
@@ -476,4 +480,21 @@ input:focus {
             border-radius: 0px;
             height: 40px;
         }
+
+        input.email-input {
+            background-color: rgb(243, 243, 243);
+            outline: 1px solid transparent;
+            color: #19181A;
+        }
+
+        .login-row-2 {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+           position: relative;
+            margin-top: 50px;
+            text-align: center;
+        }
+
 }
