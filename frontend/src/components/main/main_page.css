@@ -99,7 +99,7 @@ img.front-mobile {
 .front-title {
     position: absolute;
     display: block;
-    top: 13%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
@@ -111,7 +111,7 @@ img.front-mobile {
 .front-title-b {
     position: absolute;
     display: block;
-    top: 28%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
@@ -124,7 +124,7 @@ img.front-mobile {
     width: 50%;
     height: auto;
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%);
     border-radius: 3px;
@@ -132,6 +132,6 @@ img.front-mobile {
   }
 
 * {
-    animation: fade-in 1.2s;
+    animation: fade-in .2s;
 }
 }
