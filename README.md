@@ -26,7 +26,11 @@
 
 ### Coding Highlights
 
-**Direct Messages** are stored with two particpant keys and values, first sorted by ID and saved as ParticipantA and ParticipantB to make all requests consistent.  They are retreived from a 'GET' request that uses the current user as well as the other selected direct message participant (student or teacher):
+**Class Models** store users (teachers and students) and class discussions topics.
+
+Depending on which class is selected, the proper class discussion topics are displayed.  Within each topic is a series of messages.  These messags are stored with foreign keys that connect them to their topics, and are sorted by time.  When a topic is selected, messages are retreived using an API and displayed in order. Users can add messages and participate in the conversation.
+
+**Direct Messages** are stored with two particpant keys and values, first sorted by ID and saved as ParticipantA and ParticipantB to make all requests consistent. They are retreived from a 'GET' request that uses the current user as well as the other selected direct message participant (student or teacher), and displayed in order of the time created.
 
 ```javascript
 router.get('/', (req, res) => {
