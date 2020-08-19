@@ -17,6 +17,12 @@
     from {opacity: 0}
   
 }
+
+@keyframes slider {
+    0%, 100% {opacity: 0;}
+    40%, 50% {opacity: 1;}
+}
+
 .main-section-2 {
     width: 100%;
     background-color: white;
@@ -36,7 +42,7 @@
 
 .front-page-1 {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
     vertical-align: middle;
 
@@ -46,7 +52,7 @@
     position: absolute;
     vertical-align: middle;
     display: block;
-    top: 40%;
+    top: 30%;
     left: 10%;
     transform: translate(0, -50%);
     width: 50%;
@@ -56,17 +62,45 @@
     font-weight: 800;
 }
 
+.front-title-d {
+    position: relative;
+    vertical-align: middle;
+    display: block;
+    top: 20%;
+    left: 10%;
+    transform: translate(0, -50%);
+    width: 50%;
+    line-height: 1.2em;
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
 .front-title-b {
     position: absolute;
     display: block;
     width: 50%;
-    top: 60%;
+    top: 43%;
     left: 10%;
-    margin-top: 20px;
+    margin-top: 70px;
     transform: translate(0, -50%);
     line-height: 1.4em;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+.front-title-c {
+    position: relative;
+    display: block;
+    width: 60%;
+    top: 30%;
+    vertical-align: top;
+    left: 10%;
+    margin-top: 0px;
+    transform: translate(0, -50%);
+    line-height: 1.4em;
+    font-size: 30px;
+    font-weight: 400;
 }
 img.front-mobile {
     height: 70%;
@@ -75,7 +109,26 @@ img.front-mobile {
     left: 65%;
     transform: translate(0, -50%);
     border-radius: 3px;
-    animation: fade-in 2s;
+    animation: slider 3s infinite;
+  }
+
+  img.front-mobile-backing {
+    height: 70%;
+    position: absolute;
+    top: 55%;
+    left: 65%;
+    transform: translate(0, -50%);
+    border-radius: 3px;
+    
+  }
+
+  img.front-bottom {
+      display: inline-block;
+      position: relative;
+      margin-top: 12%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80%;
   }
 
 * {
@@ -84,6 +137,15 @@ img.front-mobile {
 .desktop-front {
     background-color: #00d9ff83;
     
+}
+
+.desktop-front-2 {
+    background-color: white;
+    height: 70vh;
+}
+
+.mobile-front-2 {
+    display: none;
 }
 
 @media (max-width: 800px) {
@@ -121,6 +183,7 @@ img.front-mobile {
     top: 32%;
     left: 50%;
     transform: translate(-50%);
+    margin-top: 0;
     width: 90%;
     font-size: 20pt;
     font-weight: 300;
@@ -141,4 +204,70 @@ img.front-mobile {
 * {
     animation: fade-in .2s;
 }
+
+img.front-mobile-backing {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3px;
+    
+  }
+
+  img.front-bottom {
+      display: none;
+      position: relative;
+      margin-top: 12%;
+      left: 38%;
+      transform: translate(-50%);
+      height: 50vh;
+  }
+
+  .desktop-front-2 {
+      display: none;
+      position: relative;
+    background-color: white;
+    height: 70vh;
+}
+
+.mobile-front-2 {
+    display: block;
+    position: relative;
+}
+
+.front-title-d {
+    position: relative;
+    vertical-align: middle;
+    display: block;
+    margin-top: 32%;
+    left: 0;
+    text-align: center;
+    transform: none;
+    width: 100%;
+    line-height: 1.2em;
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+.front-title-c {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 90%;
+    margin-top: 0%;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    left: 0;
+    padding-top: 10px;
+    transform: none;
+    line-height: 1.4em;
+    font-size: 25px;
+    font-weight: 300;
+}
+
 }

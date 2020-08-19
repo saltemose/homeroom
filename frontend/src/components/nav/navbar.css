@@ -247,8 +247,8 @@ input:focus {
 
  .demo-login {
     position: absolute;
-    width: 88%;
-    height: 13px;
+    width: 265px;
+    height: 15px;
     text-align: center;
     background-color: transparent;
     opacity: .9;
@@ -265,8 +265,8 @@ input:focus {
 
 .demo-login-1 {
     position: absolute;
-    width: 88%;
-    height: 13px;
+    width: 265px;
+    height: 15px;
     text-align: center;
     background-color: transparent;
     opacity: .9;
@@ -413,7 +413,7 @@ input:focus {
 
         .demo-login {
             position: relative;
-            width: 236px;
+            width: 240px;
             height: 16px;
             text-align: center;
             background-color: transparent;
@@ -430,7 +430,7 @@ input:focus {
         
         .demo-login-1 {
             position: relative;
-            width: 236px;
+            width: 240px;
             height: 16px;
             text-align: center;
             background-color: transparent;
@@ -446,22 +446,22 @@ input:focus {
         }
 
         input.submit {
-            width: 236px;
+            width: 242px;
             padding: 0;
             border-radius: 0;
-            height: 40px;
+            height: 41px;
             outline: none;
             border: 1px solid transparent;
-            outline: 1px solid white;
+            outline: 1px solid transparent;
             background-color: transparent;
         }
         
         input.submit-1 {
-            width: 236px;
+            width: 242px;
             padding: 0;
             border-radius: 0;
-            height: 40px;
-            outline: 1px solid #40ccf3e7;
+            height: 41px;
+            outline: 1px solid transparent;
             border: none;
             border: 1px solid #40ccf3e7;
             background-color: transparent;
