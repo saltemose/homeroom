@@ -28,7 +28,7 @@
 
 **Direct Messages** are stored with two particpant keys and values, first sorted by ID and saved as ParticipantA and ParticipantB to make all requests consistent.  They are retreived from a 'GET' request that uses the current user as well as the other selected direct message participant (student or teacher):
 
-```
+```javascript
 router.get('/', (req, res) => {
     var query = req.query;
       DirectMessage.find(query)
@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
   });
 ```
 
-```
+```javascript
 import axios from 'axios';
 
 
