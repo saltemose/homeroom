@@ -31,3 +31,6 @@ run npm install on both the backend and frontend
 
 In terminal:
 run npm run dev (and open localhost:3000)
+
+**To Be Completed**
+Add Assignment feature -- for teachers to create assignments, and students to view and submit them
