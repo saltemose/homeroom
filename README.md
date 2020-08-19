@@ -24,6 +24,30 @@
 - CSS
 - Heroku, Git
 
+### Coding Highlights
+
+**Direct Messages** are stored with two particpant keys and values, first sorted by ID and saved as ParticipantA and ParticipantB to make all requests consistent.  They are retreived from a 'GET' request that uses the current user as well as the other selected direct message participant (student or teacher):
+
+```
+router.get('/', (req, res) => {
+    var query = req.query;
+      DirectMessage.find(query)
+          .then(directmessages => res.json(directmessages))
+          .catch(err => res.status(404).json({ nomessagesfound: 'No messages found' }));
+  });
+```
+
+```
+import axios from 'axios';
+
+
+export const getDirectMessages = (participantAID, participantBID) => {
+  return axios.get(`/api/directmessages?participantA=${participantAID}&participantB=${participantBID}`)
+};
+
+
+```
+
 **TO GET APPLICATION RUNNING ON YOUR LOCAL HOST:**
 
 After cloning, 
